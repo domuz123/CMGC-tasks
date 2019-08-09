@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 100px;
+  position: relative;
+}
+
+.icon {
+  font-size: 200px;
+  height: 1em;
+  width: 1em;
+  cursor: pointer
+}
+
+
+.icon:before,
+.ic:after {
+  content: '';
+  position: absolute;
+
+}
+
+.icon.ic-glass:before {
+  top: 0.125em;
+  left: 0.125em;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: #000;
+  clip-path: polygon(6% 0, 25% 100%, 25% 100%, 14% 13%, 83% 13%, 78% 34%, 16% 33%, 25% 100%, 70% 100%, 92% 0);
+  margin-left: 30px;
+}
+
+
+
+
+.icon.hamburger {
+  background-color: #000;
+  border-radius: 30px 30px 30px 30px;
+  position: relative;
+  display: flex;
+  font-size: 90px;
+  margin-top: 85px;
+  margin-right: -60px;
+}
+
+.icon.hamburger:before {
+  background-color: white;
+  height: 0.30em;
+  width: 1em;
+  top: 38%;
+}
+
+.dots {
+  background-color: black;
+  border-radius: 50%;
+  height: 3px;
+  width: 3px;
+  margin-left: -2px;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 45%;
+  padding: 0;
+}
+
+
+.bottom {
+  background-color: #000;
+  height: 280px;
+  width: 20px;
+  transform: rotate(90deg);
+  margin-top: 50px;
+  border-radius: 0px 15px 15px 0px;
+  left: 170px;
+  position: absolute;
+}
+
+
+.glass {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: #000;
+  clip-path: polygon(13% 0, 91% 0, 76% 100%, 27% 100%);
+}
+
+.water {
+  position: absolute;
+  top: -12px;
+  clip-path: polygon(22% 28%, 82% 28%, 77% 53%, 26% 52%);
+  height: 80px;
+  width: 80px;
+  background: white;
+}
+
+.straw {
+  left: 40%;
+  font-size: 100px;
+  bottom: 3px;
+  background-color: #000;
+  clip-path: polygon(35% 0%, 65% 0%, 100% 0, 100% 10%, 45% 10%, 45% 54%, 45% 100%, 35% 100%, 35% 50%);
+  transform: rotate(10deg);
+  position: absolute;
+  top: -9px;
+  left: 110px;
+}
