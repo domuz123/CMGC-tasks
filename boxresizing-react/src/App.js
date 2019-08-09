@@ -19,6 +19,26 @@ handleWidthChange = e =>  {
  
   })}
 
+ 
+  handleWidthInput = () => {
+    let FieldVal = document.getElementById("w_number_input").value;
+    if (FieldVal > 500) {
+      this.setState({
+        width: 500
+      });
+    }
+  };
+
+  handleHeightInput = () => {
+    let FieldVal = document.getElementById("h_number_input").value;
+    if (FieldVal > 500) {
+      this.setState({
+       height: 500
+      });
+    }
+  };
+  
+
 render () {
   let style = {
     width: this.state.width + "px",
@@ -42,8 +62,8 @@ render () {
   min="1" max="500" 
   name="slider"
   value={this.state.height} 
-  onChange={this.handleHeightChange}
-></input>
+  onChange={this.handleHeightChange}>
+  </input>
 
    <input
   style={{width:"50px", borderRadius:"5px"}}
@@ -51,9 +71,11 @@ render () {
   name="quantity"
   min="1" max="500" 
   step="1"
+  id="h_number_input"
   value={this.state.height} 
-  onChange={this.handleHeightChange}></input>
-
+  onChange={this.handleHeightChange}
+  onKeyUp={this.handleHeightInput}>
+  </input>
  </div>
 
  
@@ -65,15 +87,19 @@ render () {
   min="1" max="500" 
   name="slider"
   value={this.state.width} 
-  onChange={this.handleWidthChange}></input>
+  onChange={this.handleWidthChange}>
+  </input>
 
   <input
   style={{width:"50px", borderRadius:"5px"}}
   type="number"
   name="quantity"
   min="1" max="500" 
+  id="w_number_input"
   value={this.state.width} 
-  onChange={this.handleWidthChange}></input>
+  onChange={this.handleWidthChange}
+  onKeyUp={this.handleWidthInput}>
+  </input>
  </div>
 
  </div>
