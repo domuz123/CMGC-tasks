@@ -4,26 +4,20 @@ import './index.css';
 
 
 class App extends Component {
-
   state = {
        width: 300,
-       height: 300,
- }
+       height: 300}
 
  handleHeightChange = e => {
   this.setState({
     height: e.target.value,
   
-  });
-}
-
-handleWidthChange = e => {
+  })}
+handleWidthChange = e =>  {
   this.setState({
     width: e.target.value,
  
-  })
-}
-
+  })}
 
 render () {
   let style = {
@@ -31,14 +25,11 @@ render () {
     height: this.state.height + "px",
     backgroundColor: "green"
   };
+
   return (
 
-
-
-  <div style={{display:"grid", gridTemplateColumns:"2fr 1fr 1fr"}}>
-
-  <div className="container" style={style}>
-
+  <div className="container" style={{display:"grid", gridTemplateColumns:"2fr 1fr 1fr"}}>
+  <div className="box" style={style}>
   </div>
  
 
@@ -52,20 +43,16 @@ render () {
   name="slider"
   value={this.state.height} 
   onChange={this.handleHeightChange}
- 
 ></input>
 
    <input
   style={{width:"50px", borderRadius:"5px"}}
-  id="inputValue"
-  type="text"
-  min="1" max="300" 
+  type="number" 
+  name="quantity"
+  min="1" max="500" 
+  step="1"
   value={this.state.height} 
-  onChange={this.handleHeightChange}
- 
-
- 
-  ></input>
+  onChange={this.handleHeightChange}></input>
 
  </div>
 
@@ -78,25 +65,19 @@ render () {
   min="1" max="500" 
   name="slider"
   value={this.state.width} 
-  onChange={this.handleWidthChange}
-
-  ></input>
+  onChange={this.handleWidthChange}></input>
 
   <input
   style={{width:"50px", borderRadius:"5px"}}
-  type="text"
-  min="1" max="300" 
+  type="number"
+  name="quantity"
+  min="1" max="500" 
   value={this.state.width} 
-  onChange={this.handleWidthChange}
- 
-  ></input>
+  onChange={this.handleWidthChange}></input>
  </div>
 
  </div>
-  )
-}
-
-}
+  )}}
 
 
 
